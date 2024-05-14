@@ -1,8 +1,15 @@
+import {Route, Routes} from "react-router-dom";
+
+import {Home} from "./pages/home";
+import {Layout} from "./components/layout/layout";
+
 function App() {
     return (
-        <>
-            <h2 className="text-center font-bold">Boilerplate</h2>
-        </>
+        <Routes>
+            <Route element={<Layout />}>
+                <Route element={<Home />} path="/" />
+            </Route>
+        </Routes>
     );
 }
 
